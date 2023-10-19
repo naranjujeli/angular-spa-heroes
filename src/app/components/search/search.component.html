@@ -1,12 +1,7 @@
-<h1>Heroes <small>Marvel y DC</small></h1>
+<h1>Búsqueda</h1>
 <div class="row gy-2">
     <div class="col-4" *ngFor="let hero of heroes; let i = index; ">
         <div class="card animated fadeIn fast">
-            <!-- <img
-                src="{{ hero.img }}"  <- Mismo resultado. Escribir los corchetes especifica que de ese atributo se tiene que encargar Angular.
-                class="card-img-top" 
-                alt="..."> 
-            -->
             <img [src]="hero.img" class="card-img-top" [alt]="hero.name">
             <div class="card-body">
                 <h4 class="card-title">{{ hero.name }}</h4>
@@ -18,7 +13,6 @@
                 class="btn btn-outline-primary btn-block">
                     Ver más...
                 </button>
-                <!-- <a [routerLink]="['/hero', i]" class="btn btn-outline-primary btn-block">Ver más (link)...</a> -->
             </div>
         </div>
     </div>
