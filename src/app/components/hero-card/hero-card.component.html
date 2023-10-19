@@ -1,0 +1,20 @@
+<div class="card animated fadeIn fast">
+    <!-- <img
+        src="{{ hero.img }}"  <- Mismo resultado. Escribir los corchetes especifica que de ese atributo se tiene que encargar Angular.
+        class="card-img-top" 
+        alt="..."> 
+    -->
+    <img [src]="hero.img" class="card-img-top" [alt]="hero.name">
+    <div class="card-body">
+        <h4 class="card-title">{{ hero.name }}</h4>
+        <p class="card-text">{{ hero.bio }}</p>
+        <p class="card-text"><small class="text-muted">{{ hero.aparition }}</small></p>
+        <button 
+        (click)="selectHero()"
+        type="button" 
+        class="btn btn-outline-primary btn-block">
+            Ver más...
+        </button>
+        <!-- <a [routerLink]="['/hero', i]" class="btn btn-outline-primary btn-block">Ver más (link)...</a> -->
+    </div>
+</div>

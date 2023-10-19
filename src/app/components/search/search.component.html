@@ -1,20 +1,12 @@
 <h1>Búsqueda</h1>
 <h2 *ngIf="this.heroes.length === 0">No hay nada <small style="font-size:5pt">perdon</small></h2>
 <div class="row gy-2">
-    <div class="col-4" *ngFor="let hero of heroes; let i = index; ">
-        <div class="card animated fadeIn fast">
-            <img [src]="hero.img" class="card-img-top" [alt]="hero.name">
-            <div class="card-body">
-                <h4 class="card-title">{{ hero.name }}</h4>
-                <p class="card-text">{{ hero.bio }}</p>
-                <p class="card-text"><small class="text-muted">{{ hero.aparition }}</small></p>
-                <button 
-                (click)="openHero(i)"
-                type="button" 
-                class="btn btn-outline-primary btn-block">
-                    Ver más...
-                </button>
-            </div>
-        </div>
-    </div>
+    <app-hero-card 
+    class="col-4" 
+    *ngFor="let hero of heroes; let i = index; "
+    [hero]="hero"
+    [index]="i"
+    (heroSelected)="openHero(i)"
+    >
+    </app-hero-card>
 </div>
