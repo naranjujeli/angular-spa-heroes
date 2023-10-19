@@ -24,7 +24,7 @@
           type="search" 
           placeholder="Buscar" 
           aria-label="Buscar" 
-          (keyup.enter)="searchHero(searchText.value)" 
+          (keydown.enter)="searchHero(searchText.value)" 
           #searchText>
           <button (click)="searchHero(searchText.value)" class="btn btn-outline-primary" type="button">Buscar</button>
         </form>
